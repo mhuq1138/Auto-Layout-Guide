@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6gg-hT-Wn0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preserving Superview Margins in Code-->
+        <scene sceneID="CXd-a5-X30">
+            <objects>
+                <viewController title="Preserving Superview Margins in Code" id="6gg-hT-Wn0" customClass="PreservingSuperviewMarginsVC" customModule="Safe_Area_Margins_and_Guides" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Izf-jV-PGK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-2S-etx" userLabel="Red view">
+                                <rect key="frame" x="57" y="323" width="300" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHb-R8-hx8" userLabel="Blue View">
+                                        <rect key="frame" x="18" y="28" width="224" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0f-Wz-hrA">
+                                                <rect key="frame" x="20" y="19" width="185" height="107"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="I8q-vZ-mMU"/>
+                                    <constraint firstAttribute="width" constant="300" id="M3Q-5q-UX2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msG-Ka-shY">
+                                <rect key="frame" x="57" y="603" width="237" height="36"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
+                                <state key="normal" title="Change Red View Margins"/>
+                                <connections>
+                                    <action selector="changeMarginsTapped:" destination="6gg-hT-Wn0" eventType="touchUpInside" id="Qbi-d2-0dK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SqA-2S-etx" firstAttribute="centerX" secondItem="Izf-jV-PGK" secondAttribute="centerX" id="Nfb-83-4fG"/>
+                            <constraint firstItem="msG-Ka-shY" firstAttribute="top" secondItem="SqA-2S-etx" secondAttribute="bottom" constant="30" id="mQz-X4-hJI"/>
+                            <constraint firstItem="msG-Ka-shY" firstAttribute="leading" secondItem="SqA-2S-etx" secondAttribute="leading" id="p5U-VP-Y13"/>
+                            <constraint firstItem="SqA-2S-etx" firstAttribute="centerY" secondItem="Izf-jV-PGK" secondAttribute="centerY" id="pjz-dU-fbJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pdp-Cw-As3"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueView" destination="ZHb-R8-hx8" id="mFI-lU-fD6"/>
+                        <outlet property="greenView" destination="m0f-Wz-hrA" id="erT-yp-Lch"/>
+                        <outlet property="redView" destination="SqA-2S-etx" id="sfk-2n-CgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CU-ge-8Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="80"/>
+        </scene>
+    </scenes>
+</document>

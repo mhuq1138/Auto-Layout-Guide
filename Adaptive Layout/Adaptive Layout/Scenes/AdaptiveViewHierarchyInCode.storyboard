@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XBP-L8-TYQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Adaptive View Hierarchy in Code-->
+        <scene sceneID="Yb0-MJ-4Ov">
+            <objects>
+                <viewController title="Adaptive View Hierarchy in Code" id="XBP-L8-TYQ" customClass="AdaptiveViewHierarchyInCodeVC" customModule="Adaptive_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2OY-mt-iLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QA6-30-6fi" userLabel="Red View">
+                                <rect key="frame" x="82" y="358" width="250" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvE-Q4-xnX" userLabel="Orange View">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.52660164759999994" blue="0.1513310185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dyA-G3-y92"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pvE-Q4-xnX" secondAttribute="trailing" id="3hK-7u-Ov2"/>
+                                    <constraint firstItem="pvE-Q4-xnX" firstAttribute="top" secondItem="QA6-30-6fi" secondAttribute="top" id="hBJ-i6-NHH"/>
+                                    <constraint firstAttribute="height" constant="180" id="hGr-AX-afz"/>
+                                    <constraint firstAttribute="width" constant="250" id="iHf-uW-H0b"/>
+                                    <constraint firstItem="pvE-Q4-xnX" firstAttribute="leading" secondItem="QA6-30-6fi" secondAttribute="leading" id="tzf-fv-ZCi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello from iOS World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Iw-8QK">
+                                <rect key="frame" x="82" y="548" width="250" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="19s-WZ-CvS"/>
+                                    <constraint firstAttribute="height" constant="40" id="f9e-tK-glq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QA6-30-6fi" firstAttribute="centerX" secondItem="2OY-mt-iLT" secondAttribute="centerX" id="H5T-p1-C7Q"/>
+                            <constraint firstItem="QA6-30-6fi" firstAttribute="centerY" secondItem="2OY-mt-iLT" secondAttribute="centerY" id="JWO-HQ-1ef"/>
+                            <constraint firstItem="AbS-Iw-8QK" firstAttribute="trailing" secondItem="QA6-30-6fi" secondAttribute="trailing" id="iXS-fT-Nqe"/>
+                            <constraint firstItem="AbS-Iw-8QK" firstAttribute="top" secondItem="QA6-30-6fi" secondAttribute="bottom" constant="10" id="kf7-Fp-DbH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhy-oO-tiM"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="kf7-Fp-DbH" id="FHd-g2-VGj"/>
+                        <outlet property="label" destination="AbS-Iw-8QK" id="0kX-hD-sav"/>
+                        <outlet property="labelWidthConstraint" destination="19s-WZ-CvS" id="KnJ-qM-PDO"/>
+                        <outlet property="orangeTopConstraint" destination="hBJ-i6-NHH" id="Lhs-JY-b87"/>
+                        <outlet property="orangeView" destination="pvE-Q4-xnX" id="Z6z-K3-NAj"/>
+                        <outlet property="orangeViewHeightConstraint" destination="dyA-G3-y92" id="0yv-EV-1b5"/>
+                        <outlet property="redView" destination="QA6-30-6fi" id="bhq-k0-WtJ"/>
+                        <outlet property="redViewHeightConstraint" destination="hGr-AX-afz" id="tn5-eZ-0bm"/>
+                        <outlet property="redViewWidthConstraint" destination="iHf-uW-H0b" id="TYJ-Dx-oHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVU-No-Zqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="-17"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PHW-ze-2jy">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Adaptive View Hierarchy-->
+        <scene sceneID="Tec-8d-mvp">
+            <objects>
+                <viewController title="Adaptive View Hierarchy" id="PHW-ze-2jy" customClass="AdaptiveViewHierarchyVC" customModule="Adaptive_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1I-0e-xvD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgM-LZ-orB" userLabel="Red View">
+                                <rect key="frame" x="72" y="348" width="270" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQA-ap-xqX" userLabel="Green View">
+                                        <rect key="frame" x="0.0" y="140" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="NvO-83-yjA">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="60" id="iYK-Ng-PAf">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <color key="backgroundColor" red="0.54901960780000003" green="0.32627314810000002" blue="0.22100694439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPc-Sm-iga" userLabel="Blue View">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyd-TM-AEI">
+                                                <rect key="frame" x="82" y="13" width="106" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="26B-Ec-a19">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                            </constraint>
+                                            <constraint firstItem="Xyd-TM-AEI" firstAttribute="centerY" secondItem="cPc-Sm-iga" secondAttribute="centerY" id="MS4-MZ-sMW"/>
+                                            <constraint firstItem="Xyd-TM-AEI" firstAttribute="centerX" secondItem="cPc-Sm-iga" secondAttribute="centerX" id="XUt-q5-PQl"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1Z4-Yb-EYW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="cPc-Sm-iga" secondAttribute="trailing" id="5cx-Y9-k04"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQA-ap-xqX" secondAttribute="trailing" id="6gR-Fq-w3A"/>
+                                    <constraint firstItem="cPc-Sm-iga" firstAttribute="leading" secondItem="UgM-LZ-orB" secondAttribute="leading" id="NMP-RJ-eCc"/>
+                                    <constraint firstItem="SQA-ap-xqX" firstAttribute="top" secondItem="UgM-LZ-orB" secondAttribute="top" id="Src-rr-I7o"/>
+                                    <constraint firstAttribute="width" constant="270" id="Zdc-Rw-OPp">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="540"/>
+                                    </constraint>
+                                    <constraint firstItem="cPc-Sm-iga" firstAttribute="top" secondItem="UgM-LZ-orB" secondAttribute="top" id="eEQ-f7-Zld"/>
+                                    <constraint firstItem="SQA-ap-xqX" firstAttribute="leading" secondItem="UgM-LZ-orB" secondAttribute="leading" id="klc-8R-8GO"/>
+                                    <constraint firstAttribute="bottom" secondItem="SQA-ap-xqX" secondAttribute="bottom" id="xzu-Rv-DeZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="cPc-Sm-iga" secondAttribute="bottom" constant="90" id="yie-BG-Ij6">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yie-BG-Ij6"/>
+                                        <exclude reference="6gR-Fq-w3A"/>
+                                        <exclude reference="Src-rr-I7o"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <mask key="constraints">
+                                        <exclude reference="eEQ-f7-Zld"/>
+                                        <include reference="yie-BG-Ij6"/>
+                                        <include reference="6gR-Fq-w3A"/>
+                                        <include reference="Src-rr-I7o"/>
+                                        <exclude reference="klc-8R-8GO"/>
+                                        <exclude reference="xzu-Rv-DeZ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UgM-LZ-orB" firstAttribute="centerY" secondItem="E1I-0e-xvD" secondAttribute="centerY" id="BDj-rn-yyB"/>
+                            <constraint firstItem="UgM-LZ-orB" firstAttribute="centerX" secondItem="E1I-0e-xvD" secondAttribute="centerX" id="xDp-bR-24G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u78-Jg-NyM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYa-2D-M3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="84"/>
+        </scene>
+    </scenes>
+</document>
